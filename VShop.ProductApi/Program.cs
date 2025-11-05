@@ -1,3 +1,5 @@
+using System.Security.Cryptography.Xml;
+using System.Text.Json.Serialization;
 using Microsoft.EntityFrameworkCore;
 using VShop.ProductApi.Context;
 using VShop.ProductApi.Repositories;
@@ -8,7 +10,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
-builder.Services.AddControllers();
+builder.Services.AddControllers().AddJsonOptions(x =>
+    x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
