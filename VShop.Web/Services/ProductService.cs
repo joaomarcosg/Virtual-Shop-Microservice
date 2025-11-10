@@ -91,7 +91,7 @@ namespace VShop.Web.Services
                 {
                     var apiResponse = await response.Content.ReadAsStreamAsync();
                     productUpdated = await JsonSerializer
-                        .DeserializeAsync<IEnumerable<ProductViewModel>>(apiResponse, _options);
+                        .DeserializeAsync<<ProductViewModel>(apiResponse, _options);
                 }
                 else
                 {
