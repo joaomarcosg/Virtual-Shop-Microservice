@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VShop.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c6f7e1e6163112728d3d18387dcc05fb46266ab7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9a0df355024cb21615756327900febf7a7a503a4")]
 [assembly: System.Reflection.AssemblyProductAttribute("VShop.Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VShop.Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
