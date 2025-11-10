@@ -85,12 +85,12 @@ namespace VShop.Web.Services
             var client = _clientFactory.CreateClient("ProductApi");
             ProductViewModel productUpdated = new ProductViewModel();
 
-            using (var response = await client.PutAsync(apiEndpoint, productVM))
+            using (var response = await client.PutAsJsonAsync(apiEndpoint, productVM))
             {
                 if (response.IsSuccessStatusCode)
                 {
                     var apiResponse = await response.Content.ReadAsStreamAsync();
-                    productsVM = await JsonSerializer
+                    productUpdated = await JsonSerializer
                         .DeserializeAsync<IEnumerable<ProductViewModel>>(apiResponse, _options);
                 }
                 else
