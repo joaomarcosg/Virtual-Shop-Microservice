@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
+using VShop.Web.Models;
 using VShop.Web.Services.Contracts;
 
 namespace VShop.Web.Services
@@ -19,10 +20,6 @@ namespace VShop.Web.Services
         {
             _clientFactory = clientFactory;
             _options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
-        }
-        public ProductService()
-        {
-            
         }
         public async Task<IEnumerable<ProductViewModel>> GetAllProducts()
         {
